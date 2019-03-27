@@ -1,4 +1,5 @@
 class Client < ApplicationRecord
-has_many : Ticket 
-has_many : Event 
+has_many :TicketOrder
+has_many :Ticket, through: :TicketOrder   
 end
+
