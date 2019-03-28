@@ -1,6 +1,5 @@
 class Ticket < ApplicationRecord
-has_many :TicketOrder
-has_many :Client, through: :TicketOrder 
-has_one :Event
-has_one :Category
+has_and_belongs_to_many :ticketorder
+belongs_to :event
+has_and_belongs_to_many :category
 end

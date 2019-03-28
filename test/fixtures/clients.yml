@@ -1,19 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 
-  name: MyString
+  name: 
   apellido: MyString
   mail: MyString
-  phone: 
+  phone: 1
   pass: MyString
   dir: MyString
 
 two:
-  id: 
-  name: MyString
+  name: 
   apellido: MyString
   mail: MyString
-  phone: 
+  phone: 1
   pass: MyString
   dir: MyString

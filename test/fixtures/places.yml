@@ -2,10 +2,10 @@
 
 one:
   name: MyString
+  dir: MyString
   cap: 1
-  address: MyString
 
 two:
   name: MyString
+  dir: MyString
   cap: 1
-  address: MyString

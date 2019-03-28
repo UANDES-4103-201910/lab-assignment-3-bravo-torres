@@ -1,5 +1,4 @@
 class Client < ApplicationRecord
-has_many :TicketOrder
-has_many :Ticket, through: :TicketOrder   
+has_many :ticketorder   
 end
 

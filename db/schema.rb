@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_155643) do
+ActiveRecord::Schema.define(version: 2019_03_28_174946) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,34 +32,32 @@ ActiveRecord::Schema.define(version: 2019_03_27_155643) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "descripcion"
-    t.string "direccion"
-    t.date "fecha"
+    t.date "date"
+    t.integer "Place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["Place_id"], name: "index_events_on_Place_id"
   end
 
   create_table "places", force: :cascade do |t|
     t.string "name"
+    t.string "dir"
     t.integer "cap"
-    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "ticket_orders", force: :cascade do |t|
     t.integer "total_payed"
-    t.integer "Ticket_id"
     t.integer "Client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["Client_id"], name: "index_ticket_orders_on_Client_id"
-    t.index ["Ticket_id"], name: "index_ticket_orders_on_Ticket_id"
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.string "info_event"
+    t.string "name"
     t.integer "price"
-    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

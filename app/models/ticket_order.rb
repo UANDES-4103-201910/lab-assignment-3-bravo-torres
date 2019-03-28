@@ -1,4 +1,4 @@
 class TicketOrder < ApplicationRecord
-belongs_to :Client
-belongs_to :Ticket
+belongs_to :client
+has_and_belongs_to_many :ticket
 end
